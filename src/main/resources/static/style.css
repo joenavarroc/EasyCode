@@ -1,0 +1,8 @@
+
+body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+.contenedor { max-width: 600px; margin: auto; background: white; padding: 80px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+label { display: block; margin-top: 10px; font-weight: bold; }
+input, select, button { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+#imagenCodigo { display: block; margin-top: 10px; margin-left: 110px; max-width: 100%; }
+.tooltip { font-size: 0.9em; color: #666; margin-top: 5px; }
+.botones { display: flex; gap: 10px; margin-top: 20px; }

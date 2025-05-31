@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Códigos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow p-4">
+                    <h2 class="mb-4 text-center">Generador de Códigos</h2>
+                    <form id="formulario">
+                        <div class="mb-3">
+                            <label for="tipo" class="form-label">Tipo de Código</label>
+                            <select id="tipo" name="tipo" class="form-select">
+                                <option value="QR_CODE">QR</option>
+                                <option value="CODE_128">Code 128</option>
+                                <option value="EAN_13">EAN-13</option>
+                                <option value="UPC_A">UPC-A</option>
+                                <option value="CODE_39">Code 39</option>
+                                <option value="PDF_417">PDF417</option>
+                            </select>
+                            <div class="form-text" id="infoTipo">Selecciona un tipo de código para ver requisitos.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="texto" class="form-label">Contenido del Código</label>
+                            <input type="text" id="texto" name="texto" class="form-control" placeholder="Ej: 123456789012">
+                            <div class="form-text text-muted" id="validacion"></div>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input type="checkbox" id="autoGenerar" class="form-check-input">
+                            <label class="form-check-label" for="autoGenerar">
+                                Generar automáticamente un código válido (EAN-13 o UPC-A)
+                            </label>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">Generar Código</button>
+                            <button type="button" id="descargar" class="btn btn-secondary" disabled>Descargar Imagen</button>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <img id="imagenCodigo" class="img-fluid" style="display:none;" alt="Código generado">                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
